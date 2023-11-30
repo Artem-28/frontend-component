@@ -1,0 +1,244 @@
+.icon {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  display: inline-flex;
+  flex-shrink: 0;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.1rem;
+  line-height: 1em;
+  transition: transform 0.6s;
+
+  &_pointer,
+  &_goback {
+    transition: color $speed-high, background $speed-high;
+    cursor: pointer;
+  }
+
+  &_bg {
+    background: linear-gradient(149deg, #505764 4%, #2C3037 100%);
+
+    &_circle {
+      border-radius: 50%;
+    }
+
+    &_radius {
+      border-radius: $radius;
+    }
+  }
+
+  &__slot {
+    opacity: 0 !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &>* {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_goback {
+    @include transition-background;
+    background-color: $primary;
+    border-radius: 50%;
+    font-size: 3.2rem;
+    margin: 0.1em 0 0.75em;
+
+    &:hover {
+      background-color: $grey;
+    }
+  }
+
+  &_goback &__inner {
+    color: #fff;
+    font-size: 0.5em;
+    font-weight: 700;
+  }
+
+  &_disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  // Custom
+  &_sub {
+    position: absolute;
+    z-index: 2;
+    margin: -0.3em 0 0 -0.2em;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    line-height: inherit;
+  }
+
+  &__inner {
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &_bg &__inner {
+    fill: #fff;
+    color: #fff;
+    font-size: 0.7em;
+    width: 0.9em;
+    height: 0.9em;
+
+    &_sea-level,
+    &_level,
+    &_prec-intencity,
+    &_size {
+      width: 0.7em;
+      height: 0.7em;
+    }
+
+    &_road,
+    &_checked,
+    &_hide,
+    &_error,
+    &_files,
+    &_link,
+    &_server-cpu,
+    &_security,
+    &_focus {
+      width: 0.8em;
+      height: 0.8em;
+    }
+
+    &_voltage {
+      width: 1em;
+      height: 1em;
+    }
+
+    &_temp-point {
+      width: 1.1em;
+      height: 1.1em;
+    }
+
+    &_cloud,
+    &_cloud-snow,
+    &_cloud-hail,
+    &_cloud-fog {
+      width: 2em;
+      height: 2em;
+      margin: -0.3em;
+    }
+  }
+
+  &_mt {
+    margin-top: -4px;
+  }
+
+  &--red {
+    color: $danger;
+  }
+
+  &--grey {
+    color: $secondary;
+  }
+
+  &--primary {
+    color: $primary;
+  }
+
+  &--green {
+    color: $success;
+  }
+}
+
+.main-info-icon {
+  position: absolute;
+  right: -4.5rem;
+  color: $primary;
+  cursor: pointer;
+  font-size: 2.2rem;
+  line-height: 4rem;
+  vertical-align: middle;
+  margin-bottom: 0.4rem;
+}
+
+.main-trash-icon {
+  color: $danger;
+  font-size: 2.5rem;
+}
+
+.icon-geometry {
+  margin: 3rem 0 4rem;
+}
+
+.icon {
+  &_vehicle-1 {
+    height: 0.6em;
+  }
+
+  &_vehicle-2 {
+    height: 0.35em;
+  }
+
+  &_vehicle-3 {
+    height: 0.3em;
+  }
+
+  &_vehicle-4 {
+    height: 0.5em;
+  }
+
+  &_vehicle-5 {
+    height: 0.32em;
+  }
+
+  &_vehicle-6 {
+    height: 0.4em;
+  }
+}
+
+.icon__inner {
+
+  &_class2,
+  &_location-arrow {
+    width: 0.9em;
+    height: 0.9em;
+  }
+
+  &_logout {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.icon-vehicle {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__num {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -.9rem;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: $primary;
+    border-radius: 50%;
+  }
+}

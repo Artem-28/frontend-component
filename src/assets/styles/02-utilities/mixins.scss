@@ -1,0 +1,16 @@
+@mixin background-light {
+  background: linear-gradient(152deg, #505764 4%, #2C3037);
+}
+
+@mixin background-base {
+  background: linear-gradient(to top, $black, #2a3038 90%);
+  border-radius: 0.8rem;
+}
+
+@mixin transition-color {
+  transition: color .1s;
+}
+
+@mixin transition-background {
+  transition: background-color .25s ease;
+}

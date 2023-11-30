@@ -1,0 +1,87 @@
+body, #app {
+    height: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-style: normal;
+    background-color: $dark;
+    color: $paper;
+    font-size: 1.6rem;
+
+    *::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    *::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+    *::-webkit-scrollbar-button, *::-webkit-scrollbar-track, *::-webkit-scrollbar-corner, *::-webkit-scrollbar-track-piece {
+        background: none;
+    }
+    *::-webkit-scrollbar-thumb {
+        height: 50px;
+        width: 50px;
+        border-radius: 3px;
+    }
+    *::-webkit-resizer, *::-webkit-scrollbar-thumb {
+        background-color: rgba(118, 125, 136, 0.5);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    &:hover, &:active {
+        color: $danger;
+    }
+}
+
+p {
+    min-height: 1.2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1;
+    margin: 0.45em 0 2.6rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    min-height: 1em;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+hr {
+    margin: 2.4rem 0 3.6rem;
+    border: 0;
+    border-top: 1px solid $grey;
+}

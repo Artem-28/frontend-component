@@ -1,0 +1,46 @@
+$rubikPath: '@/assets/fonts/Rubik/';
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik Light'),
+  local('Rubik-Light'),
+  url('#{$rubikPath}Rubiklight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik'),
+  local('Rubik-Regular'),
+  url('#{$rubikPath}Rubik.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik Medium'),
+  local('Rubik-Medium'),
+  url('#{$rubikPath}Rubikmedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik Bold'),
+  local('Rubik-Bold'),
+  url('#{$rubikPath}Rubikbold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik Black'),
+  local('Rubik-Black'),
+  url('#{$rubikPath}Rubikblack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}

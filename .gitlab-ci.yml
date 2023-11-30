@@ -1,0 +1,101 @@
+image: node:14.18.1
+
+stages:
+  - setup
+  - build
+  - deployment
+  - pages
+
+# stage: setup
+
+setup:
+  stage: setup
+  tags: [IntelViz]
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - node_modules/
+  script:
+    - npm run
+  only: [/^dev-\d*\.\d*(\.\d*)+$/]
+
+# stage: build (here I run linter, unit tests, and everything I want to build or test)
+
+# build:
+#   stage: build
+#   tags: [IntelViz]
+#   artifacts:
+#     paths:
+#       - dist/
+#   script:
+#     - npm run build:lib
+
+storybook:
+  stage: build
+  tags: [IntelViz]
+  artifacts:
+    expire_in: 2 weeks
+    when: always
+    paths:
+      - storybook/
+  before_script:
+    - npm install storybook
+  script:
+    - npm run build-storybook --output-dir storybook
+  only: [/^dev-\d*\.\d*(\.\d*)+$/]
+
+# stage: deployment (here I deploy my app to specific stages or other artefacts like storybook)
+
+deploy-storybook:
+  stage: deployment
+  tags: [IntelViz]
+  script:
+    - echo "Enjoy the day. 🥳 Every job needs a script, but this job was just created to configure an environment."
+  environment:
+    name: storybook/$CI_COMMIT_REF_SLUG
+    url: http://projects.pages.stdev.ru/intelviz-vms/frontend-components/$CI_COMMIT_REF_SLUG/storybook/
+    on_stop: remove-storybook
+  only: [/^dev-\d*\.\d*(\.\d*)+$/]
+
+remove-storybook:
+  stage: deployment
+  tags: [IntelViz]
+  cache:
+    key: 'my-storybook'
+    paths:
+      - public
+  script:
+    - rm -rf "public/$CI_COMMIT_REF_SLUG/storybook"
+  when: manual
+  variables:
+    GIT_STRATEGY: none # needed to prevent "Couldn't find remote ref" error
+  environment:
+    name: storybook/$CI_COMMIT_REF_SLUG
+    action: stop
+  only: [/^dev-\d*\.\d*(\.\d*)+$/]
+
+# stage: pages (the stage name is custom, but the job NEEDS to be named pages)
+
+pages:
+  stage: pages
+  tags: [IntelViz]
+  cache:
+    key: 'my-storybook'
+    paths:
+      - public
+  script:
+    - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then
+      mkdir -p public;
+      touch public/index.html;
+      echo "<!DOCTYPE HTML><script>window.location.href = 'http://projects.pages.stdev.ru/intelviz-vms/frontend-components/master/storybook'</script>" > public/index.html;
+      fi;
+    - rm -rf "public/$CI_COMMIT_REF_SLUG"
+    - mkdir -p "public/$CI_COMMIT_REF_SLUG";
+    - mv storybook "public/$CI_COMMIT_REF_SLUG"
+  artifacts:
+    paths:
+      - public
+  only: [/^dev-\d*\.\d*(\.\d*)+$/]

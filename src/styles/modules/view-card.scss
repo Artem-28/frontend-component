@@ -1,0 +1,173 @@
+.view-card {
+    position: relative;
+    // margin: 0 -15px;
+    // padding-bottom: 3.6rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // .common-view {
+    //   padding-right: -8px;
+    //   .el-tab-pane {
+    //     padding-right: 8px;
+    //   }
+    // }
+    &--highest{
+        height: 100%;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        right: 4rem;
+        top: 2.5rem;
+    }
+    // &__main {}
+    &__title {
+        margin-left: 2.5rem;
+    }
+    &__head-info {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    &__hr {
+        margin: 1.7rem 0 2.7rem;
+        border-color: $dark;
+    }
+    &__section {
+        margin-bottom: 2.4rem;
+        padding: 3.6rem 2.4rem 0.5rem;
+        border-radius: 24px;
+        background: $graphit;
+        color: $paper;
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 20px;
+            padding-bottom: 35px;
+            margin: 0;
+            color: #fff;
+        }
+
+        &:not(.view-card__section_hidden) + & {
+            border-top: 1px solid $super-light;
+        }
+        &_nearby_camera {
+            .el-row {
+                align-items: flex-start;
+                p {
+                   &:last-child{
+                       padding-bottom: 0.3rem;
+                   }
+                }
+            }
+        }
+        &_min {
+            padding-bottom: 0;
+            &+& {
+                margin-top: 2px;
+                border: none;
+            }
+        }
+        &_changed {
+            background-color: $black;
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        &_map {
+            /*padding: 1.8rem;*/
+            // height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            h3{
+              padding-bottom: 0;
+            }
+            .map-basemap{
+              border-radius: 1.5rem;
+              margin: 1.5rem 0;
+              flex-grow: 1;
+              .mapboxgl-ctrl-attrib.mapboxgl-compact {
+                display: none;
+              }
+            }
+        }
+        &_sticky_top{
+          position: sticky;
+          top: 0;
+        }
+    }
+    &__section-form {
+        margin-top: 3rem;
+    }
+    &__footer {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+        border-top: 1px solid $dark;
+        background-color: $black-hover;
+        h3 {
+            font-size: 2.2rem;
+            margin-bottom: 0.7em;
+        }
+    }
+    &__footer &__section:first-of-type h3{
+        margin-top: 0;
+    }
+    .el-table span {
+        cursor: pointer;
+    }
+    .action-controls {
+        border: none;
+        border-radius: 0 0 0.8rem 0.8rem;
+        &__pointer {
+            pointer-events: all;
+            cursor: pointer;
+        }
+        &__wrap {
+            padding: 0;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    .action-controls-helper {
+        border-top: none;
+        & .action-controls__wrap {
+            padding-top: 0.67rem;
+        }
+    }
+
+    &__area-title {
+        margin-top: 30px;
+    }
+    &__list-item {
+        &:nth-child(1) {
+            margin-right: 1rem;
+        }
+        &_light {
+            color: $grey;
+        }
+    }
+    .el-tabs {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        height: 100%;
+        &__header {
+            margin: 0;
+        }
+        &__content {
+          // padding-right: 8px;
+          height: 100%;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+    }
+}
+

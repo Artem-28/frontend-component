@@ -1,0 +1,88 @@
+/* theme color */
+@import '02-utilities/vars';
+
+$--color-black: $black;
+$--color-white: $black;
+
+$--background-color-base: $dark;
+$--border-color-lighter: $dark;
+
+$--color-info: $dark;
+$--button-default-background-color: $--color-info;
+$--button-default-border-color: $--color-info;
+
+$--color-text-secondary: $grey;
+$--border-color-base: $grey;
+$--border-color-light: $grey;
+$--color-text-placeholder: $grey;
+
+$--color-primary: $primary;
+$--datepicker-inrange-background-color: $primary;
+$--datepicker-inrange-hover-background-color: $primary;
+$--datepicker-active-color: $primary;
+
+$--color-success: $success;
+
+$--color-danger: $danger;
+
+$--button-border-radius: 0.8rem;
+
+$--button-default-font-color: #fff;
+$--color-text-primary: #fff;
+$--color-text-regular: #fff;
+$--message-success-font-color: #fff;
+$--message-warning-font-color: #fff;
+$--message-danger-font-color: #fff;
+$--datepicker-hover-font-color: #fff;
+
+$--radio-input-background-color: transparent;
+$--radio-checked-input-background-color: transparent;
+$--input-background-color: transparent;
+$--datepicker-inner-border-color: transparent;
+
+$--pagination-background-color: transparent;
+$--pagination-button-width: 3.2rem;
+$--pagination-button-height: 3.2rem;
+
+$--checkbox-bordered-height: 4rem;
+$--radio-bordered-height: 4rem;
+$--input-width: 14rem;
+$--input-height: 4rem;
+$--switch-width: 4rem;
+$--transfer-panel-header-height: 4rem;
+$--transfer-panel-footer-height: 4rem;
+$--avatar-large-size: 4rem;
+
+$--font-size-base: 1.4rem;
+$--size-base: 1.4rem;
+$--checkbox-font-size: 1.4rem;
+$--checkbox-input-height: 1.4rem;
+$--checkbox-input-width: 1.4rem;
+$--checkbox-bordered-medium-input-height: 1.4rem;
+$--checkbox-bordered-medium-input-width: 1.4rem;
+$--radio-input-height: 1.4rem;
+$--radio-input-width: 1.4rem;
+$--radio-bordered-medium-input-height: 1.4rem;
+$--radio-bordered-medium-input-width: 1.4rem;
+$--select-input-font-size: 1.4rem;
+$--notification-padding: 1.4rem 2.6rem 1.4rem 1.3rem;
+$--input-max-width: 31.4rem;
+$--input-medium-font-size: 1.4rem;
+$--dialog-content-font-size: 1.4rem;
+$--timeline-node-size-large: 1.4rem;
+$--avatar-text-font-size: 1.4rem;
+
+$--switch-on-color: $success;
+$--switch-off-color: $danger;
+
+$--tooltip-padding: 2rem;
+$--tooltip-fill: $dark;
+$--tooltip-color: #fff;
+
+$--popover-background-color: $back;
+$--popover-padding: 1.2rem;
+
+/* icon font path, required */
+// $--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// @import "~element-ui/packages/theme-chalk/src/index";

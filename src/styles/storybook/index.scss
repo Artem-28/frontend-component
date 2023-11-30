@@ -1,0 +1,18 @@
+@import '../utilities/vars.scss';
+@import '../fonts';
+
+.ui-list {
+    background: $back-hover;
+    padding: 24px;
+    &__item {
+        margin-top: 16px;
+    }
+}
+
+.ui-row {
+    display: flex;
+    gap: 8px;
+    &--wrapped {
+        flex-wrap: wrap;
+    }
+}
