@@ -1,6 +1,6 @@
 {
   "name": "@artem-28/frontend-components",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "main": "./dist/frontend-components.umd.js",
   "module": "./dist/frontend-components.umd.js",
