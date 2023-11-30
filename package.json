@@ -1,7 +1,7 @@
 {
-  "name": "frontend-components",
+  "name": "@artem-28/frontend-components",
   "version": "0.1.2",
-  "private": true,
+  "private": false,
   "main": "./dist/frontend-components.umd.js",
   "module": "./dist/frontend-components.umd.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "@vue/compiler-sfc": "^3.2.45",
     "core-js": "^3.8.3",
     "element-ui": "^2.13.0",
-    "vue": "^2.7.14",
+    "vue": ">=2.7.14",
     "vue-multiselect": "^2.1.7"
   },
   "devDependencies": {
@@ -35,6 +35,7 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
+    "auto": "^11.0.4",
     "babel-loader": "^8.3.0",
     "core-js": "^3.26.1",
     "eslint": "^8.31.0",
@@ -62,5 +63,16 @@
   },
   "peerDependencies": {
     "vue": ">=2.7.14"
-  }
+  },
+  "description": "## Запуск storybook",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artem-28/frontend-component.git"
+  },
+  "author": "artem-28",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artem-28/frontend-component/issues"
+  },
+  "homepage": "https://github.com/Artem-28/frontend-component#readme"
 }
